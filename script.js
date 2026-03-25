@@ -12,6 +12,7 @@
 
 
 // ----- Helpers -----
+var num = 0;
 function $(id) { return document.getElementById(id); }
 function setText(id, value) { $(id).textContent = String(value); }
 
@@ -46,4 +47,23 @@ function onQuadraticClick() {
   const a = $('qa').value, b = $('qb').value, c = $('qc').value;
   const roots = quadratic(a, b, c);
   setText('outQuadratic', Array.isArray(roots) ? roots.join(', ') : roots);
+}
+function myFunc(){
+  return num ++
+}
+function getRandomNum(max){
+  if(max<0){
+    return 0
+  }else{
+  return Math.floor(Math.random() * max) + 1;
+  }
+}
+function myAdder(x,y){
+  return Number(x) + Number(y);
+}
+function distance(x1, y1, x2, y2){
+  return(Math.sqrt((Number(x2)-Number(x1))**2+(Number(y2)-Number(y1))**2));
+}
+function quadratic(a, b, c){
+  
 }
